@@ -1,0 +1,37 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=Numsey#2022
+      - ACCEPT_EULA=Y
+    volumes:
+      - ./db:/var/opt/mssql/data
+    networks:
+      - backend
+    ports:
+      - "1450:1433"
+
+  ambulance:
+    image: ${DOCKER_REGISTRY-}ambulance
+    build:
+      context: .
+      dockerfile: Ambulance/Dockerfile
+    networks:
+      - backend
+
+  gateway.api:
+    image: ${DOCKER_REGISTRY-}gatewayapi
+    build:
+      context: .
+      dockerfile: GateWay.API/Dockerfile
+    networks:
+      - backend
+    ports:
+      - "7777:8080"
+
+

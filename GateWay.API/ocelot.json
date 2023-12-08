@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Patient/GetAllPatients",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ambulance",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/GetAllPatients",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Patient/GetByIdPatients",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ambulance",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/GetByIdPatients",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ]
+}
