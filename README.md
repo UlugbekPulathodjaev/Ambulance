@@ -10,6 +10,8 @@ This project was created exclusively for testing and exploring the capabilities 
 
 - **Docker Compose:** Docker Compose is used for container orchestration, allowing easy deployment and scaling of the project.
 
+- **CRUD Operations:** The project includes CRUD (Create, Read, Update, Delete) operations for a single model.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -41,9 +43,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This readme is available in both English and Russian.
 
----
 
-**Ambulance Проект Readme (C#)**
+
+Конечно, простите за недоразумение. Вот ваш запрос:
+
+**Ambulance Project Readme (C#)**
 
 ## Описание
 
